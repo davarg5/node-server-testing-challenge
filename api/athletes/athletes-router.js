@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     Athlete.remove(req.params.id)
-        .then(athlete => {
+        .then(athlete => { 
             if(athlete.length === 0) { 
                 res.status(404).json('404 error');
             }
